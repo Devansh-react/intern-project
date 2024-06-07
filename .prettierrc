@@ -1,0 +1,5 @@
+{
+    "singlequote" : true,
+    "doublequote" : true,
+    "tabwidth": 4
+}
