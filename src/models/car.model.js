@@ -20,7 +20,7 @@ const carInfo = new mongoose.Schema({
  const carSchema = new mongoose.Schema({
     OwnerName:{
         type:Schema.Types.ObjectId,
-        ref:user,
+        ref:"user",
     },
     carSegment:{
         type:String,
