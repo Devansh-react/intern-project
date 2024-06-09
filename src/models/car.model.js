@@ -1,16 +1,15 @@
 import mongoose, { Schema } from "mongoose";
-import { type } from "os";
 const carInfo = new mongoose.Schema({
    
     colour:{
-        type:string,
+        type:String,
     },
     kmCovered:{
-        type:number,
+        type:Number,
         required:true,
     },
     fuelType:{
-        type:string,
+        type:String,
         required:true,
         enum:["petrol","diesel"],
 
@@ -38,4 +37,7 @@ const carInfo = new mongoose.Schema({
     },
     carInfo:[carInfo],
  },{timestamps:true})
+
+
+ 
  export const car= mongoose.model("car",carSchema)

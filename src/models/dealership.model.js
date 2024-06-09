@@ -1,7 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import { cars } from "./cars.model.js";
-import { deal } from "./deal.model.js";
-import { soldvehical } from "./sold_vehical.model.js";
+
 
 const dealershipInfo = new mongoose.Schema({
     dealerAddress: {
@@ -33,7 +31,7 @@ const dealershipSchema = new mongoose.Schema({
         required: true,
     },
     dealerLocation: {
-        type: string,
+        type: String,
         required: true
     },
     deal: {
@@ -50,7 +48,7 @@ const dealershipSchema = new mongoose.Schema({
     },
     dealerShipInfo: [dealershipInfo],
     refreshTokens: {
-        type: string
+        type: String
     }
 
 

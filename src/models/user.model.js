@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import mongoose, { Schema } from "mongoose";
-const userInfo=new mongoose.Schema(
+const userInfo= mongoose.Schema(
     {
         userName:{
             type:String,
@@ -27,8 +27,7 @@ const userInfo=new mongoose.Schema(
 const userSchema = mongoose.Schema({
     userEmail:{
         type:String,
-        require:true,
-        unique:true
+        require:true
     },
     userPassword:{
         type:String,
@@ -36,12 +35,13 @@ const userSchema = mongoose.Schema({
         
     },
     userLocation:{
-        type:string,
-        require:true
+        type:String,
+
     },
     userInfo:[userInfo],
+
     refreshToken:{
-        type:strings
+        type:String
     }
 
 
@@ -60,7 +60,7 @@ userSchema.methods.comparePassword= async function (password){
     
 }
 
-userschema.methods.gernaterefreshtoken = function () {
+userSchema.methods.gernaterefreshtoken = function () {
     return Jwt.sign(
         {
            _id: this._id,
@@ -75,7 +75,7 @@ userschema.methods.gernaterefreshtoken = function () {
 
     )
 }
-userschema.methods.gernateaccesstoken = function () {
+userSchema.methods.gernateaccesstoken = function () {
     return Jwt.sign(
         {
             _id: this._id,

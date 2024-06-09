@@ -16,8 +16,8 @@ const deals= new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref:"car"
     },
-    dealInfo:[deal]
+    dealInfo:[dealInfo]
 
  },{timestamps:true})
  
- export const deal= mongoose.model("deal",deal)
+ export const deal= mongoose.model("deal",deals)

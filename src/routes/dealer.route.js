@@ -1,12 +1,16 @@
 import { Router } from "express";
-import { register } from "module";
-import { reguisterDealer} from "../controllers/user.controller.js";
-const router = Router();
+import { reguisterDealer } from "../controllers/dealer.controller.js";
+import { allDeals } from "../controllers/deal.controller.js";
 
-router.route("/registerdealer").post(reguisterDealer)
+const dealerrouter = Router();
+//route to register a dealer
+dealerrouter.route("/registerdealer").post(reguisterDealer)
+//route for display of all deals 
+dealerrouter.route("/allDeals").post(allDeals)
 
 
 
 
 
-export default router
+
+export default dealerrouter

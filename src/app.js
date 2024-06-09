@@ -13,9 +13,13 @@ app.use(express(JSON))
 //routes import :
 
 import router from "./routes/user.route.js";
+import dealerrouter from "./routes/dealer.route.js";
+
+
 
 //routes decleration
  app.use("/api/v1/users", router);
+ app.use("/api/v1/dealer", dealerrouter);
 
 
 export default app;
