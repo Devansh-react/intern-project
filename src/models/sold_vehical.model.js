@@ -2,11 +2,11 @@ import mongoose, { Schema } from "mongoose";
 const vehicalInfo = new mongoose.Schema({
 
     kmCovered:{
-        type:number,
+        type:Number,
         required:true,
     },
     fuelType:{
-        type:string,
+        type:String,
         required:true,
         enum:["petrol","diesel"],
 
