@@ -21,5 +21,10 @@ import dealerrouter from "./routes/dealer.route.js";
  app.use("/api/v1/users", router);
  app.use("/api/v1/dealer", dealerrouter);
 
+ //to handle form data from user 
+ app.get("api/v1/user/:formdata", async function(req, res){
+    res.params.formdata
+ })
+
 
 export default app;
